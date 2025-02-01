@@ -5,5 +5,6 @@ def get_sql_connection():
     if __cnx is None:
         __cnx = mysql.connector.connect(user='root', password='root',
                               host='127.0.0.1',
-                              database='grocerystore')
+                              database='grocerystore',
+                                        autocommit = True)
     return __cnx
